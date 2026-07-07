@@ -1297,16 +1297,23 @@ window.addEventListener('DOMContentLoaded',()=>{
 });
 </script>
 <script>
-  // Le lien que PropellerAds t'a donné
-  var pubURL = "https://omg10.com/4/11254553";
+// ✅ SCRIPT PUBLICITAIRE PROPULSION (version robuste)
+(function() {
+    // On attend que la page soit complètement chargée
+    if (document.readyState === 'complete') {
+        lancerPub();
+    } else {
+        window.addEventListener('load', lancerPub);
+    }
 
-  // Fonction pour ouvrir la pub dans un nouvel onglet/fenêtre
-  function afficherPub() {
-      window.open(pubURL, '_blank');
-  }
-
-  // On lance la pub 2 secondes après le chargement de la page
-  setTimeout(afficherPub, 2000);
+    function lancerPub() {
+        // On ouvre la pub 1.5 secondes après le chargement
+        setTimeout(function() {
+            var pubURL = "https://omg10.com/4/11254553";
+            window.open(pubURL, '_blank');
+        }, 1500);
+    }
+})();
 </script>
 </body>
 </html>
