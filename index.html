@@ -1296,5 +1296,17 @@ window.addEventListener('DOMContentLoaded',()=>{
     if(initThreeJS()){ updateCamera(); setupEventListeners(); animate(); maybeShowTutorial(); setTimeout(checkDailyReward,800); }
 });
 </script>
+<script>
+  // Le lien que PropellerAds t'a donné
+  var pubURL = "https://omg10.com/4/11254553";
+
+  // Fonction pour ouvrir la pub dans un nouvel onglet/fenêtre
+  function afficherPub() {
+      window.open(pubURL, '_blank');
+  }
+
+  // On lance la pub 2 secondes après le chargement de la page
+  setTimeout(afficherPub, 2000);
+</script>
 </body>
 </html>
